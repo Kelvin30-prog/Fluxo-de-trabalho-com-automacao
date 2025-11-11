@@ -29,8 +29,6 @@ pyautogui.click(x=610, y=553) # Dando um clique no arquivo
 pyautogui.click(x=846, y=441) # Baixando o arquivo
 
 # Calcular os indicadores (faturamento e a quantidade de produtos vendidos)
-import pandas
-
 caminho = r"C:\Users\Kelvin Rodrigues\Downloads\Vendas - Dez.xlsx" # procurando o arquivo baixado
 tabela = pandas.read_excel(caminho) # lendo o arquivo
 print(tabela) # imprimindo as informações
@@ -39,8 +37,6 @@ faturamento = tabela["Valor Final"].sum() # somando os valores na coluna selecio
 qtde_produtos = tabela["Quantidade"].sum() # somando os valores na coluna selecionada
 
 # Enviar informações por e-mail
-import pyperclip
-
 pyautogui.hotkey("ctrl", "t") # abrindo uma nova aba
 time.sleep(5)
 
@@ -74,4 +70,5 @@ pyperclip.copy(texto)
 pyautogui.hotkey("ctrl", "v")
 pyautogui.hotkey("ctrl", "enter")
 time.sleep(5)
+
 pyautogui.click(x=414, y=964)
